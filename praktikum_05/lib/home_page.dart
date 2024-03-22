@@ -29,7 +29,8 @@ class HomePage extends StatelessWidget {
             // Tombol Kedua
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/second_page');
+                Navigator.pushNamed(context, '/second_page',
+                    arguments: 'Menggunakan route');
               },
               child: const Text('Menuju halaman kedua dengan route'),
             ),
