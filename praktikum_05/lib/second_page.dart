@@ -8,6 +8,12 @@ class SecondPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Second Page'),
       ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {},
+          child: const Text('Kembali'),
+        ),
+      ),
     );
   }
 }
