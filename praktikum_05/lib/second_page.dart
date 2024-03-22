@@ -11,11 +11,20 @@ class SecondPage extends StatelessWidget {
         title: const Text('Second Page'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Kembali'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              data ?? '',
+              style: const TextStyle(fontSize: 20.0),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Kembali'),
+            ),
+          ],
         ),
       ),
     );
