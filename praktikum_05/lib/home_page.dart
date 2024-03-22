@@ -15,7 +15,9 @@ class HomePage extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const SecondPage(),
+                builder: (context) => const SecondPage(
+                  data: 'Data dari Home Page',
+                ),
               ),
             );
           },
