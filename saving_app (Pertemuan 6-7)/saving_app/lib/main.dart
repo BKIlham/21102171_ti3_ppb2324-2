@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saving_app/pages/main_page.dart';
 
 import 'pages/on_boarding_page.dart';
 
@@ -11,10 +12,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Saving App',
-      home: OnBoardingPage(),
+      routes: {
+        OnBoardingPage.nameRoute: (context) => OnBoardingPage(),
+        MainPage.nameRoute: (context) => MainPage(),
+      },
     );
   }
 }

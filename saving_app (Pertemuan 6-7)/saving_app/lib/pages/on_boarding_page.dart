@@ -4,6 +4,7 @@ import 'package:saving_app/styles/text_styles.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
+  static const nameRoute = '/';
 
   @override
   Widget build(BuildContext context) {
@@ -22,21 +23,27 @@ class OnBoardingPage extends StatelessWidget {
             ),
             Container(
               padding: EdgeInsets.all(26),
-              constraints: BoxConstraints.expand(height: 300, width: 315),
+              constraints: BoxConstraints.expand(
+                height: 300,
+                width: 315,
+              ),
               decoration: BoxDecoration(
-                  color: kWhite,
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
+                color: kWhite,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
+                ),
+              ),
               child: Column(
                 children: [
                   Text(
-                    "Welcome!",
+                    'Welcome!',
                     style: kHeading5.copyWith(color: kBlack),
                   ),
                   SizedBox(
                     height: 15,
                   ),
                   Text(
-                    "welcome to Fleet Finance, the easy way to improve your finances and help you control expenses and income",
+                    'welcome to Fleet Finance, the easy way to improve your finances and help you control expenses and income',
                     style: kSubtitle2.copyWith(color: kSuvaGray),
                     textAlign: TextAlign.center,
                   ),
@@ -44,19 +51,27 @@ class OnBoardingPage extends StatelessWidget {
                     height: 70,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, '/main', (route) => false);
+                    },
                     child: Text(
                       'Get Started',
-                      style: kBkButton1.copyWith(color: kWhite),
+                      style: kButton1.copyWith(color: kWhite),
                     ),
                     style: TextButton.styleFrom(
-                        backgroundColor: kBlueRibbon,
-                        padding:
-                            EdgeInsets.symmetric(vertical: 14, horizontal: 36),
-                        shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10)))),
-                  ),
+                      backgroundColor: kBlueRibbon,
+                      padding: EdgeInsets.symmetric(
+                        vertical: 14,
+                        horizontal: 36,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               ),
             )
