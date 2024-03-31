@@ -137,7 +137,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
     );
-  }
+  } 
 
   Widget _transactionList(
       Color bgColor, String icon, String title, String sub, String amount) {
