@@ -70,6 +70,40 @@ class PortofolioPage extends StatelessWidget {
               'Rp. 2.050.000 / Rp. 4.000.000', 'Last saving February 16'),
           _portofolioCardList('assets/icons/camera.png', 'Camera', 0.5,
               'Rp. 2.050.000 / Rp. 4.000.000', 'Last saving February 16'),
+          Container(
+            margin: EdgeInsets.symmetric(
+              vertical: 20,
+              horizontal: 30,
+            ),
+            child: TextButton(
+              onPressed: () {},
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.add,
+                    size: 13,
+                    color: kLuckyBlue,
+                  ),
+                  Text(
+                    'add portofolio',
+                    style: kButton2.copyWith(
+                        color: kLuckyBlue, fontWeight: FontWeight.w600),
+                  )
+                ],
+              ),
+              style: TextButton.styleFrom(
+                backgroundColor: kWhite,
+                padding: EdgeInsets.symmetric(vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
+                  ),
+                ),
+                elevation: 4,
+              ),
+            ),
+          )
         ],
       ),
     );
