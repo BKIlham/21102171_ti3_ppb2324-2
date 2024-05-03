@@ -1,9 +1,10 @@
-import 'package:firebase_auth9/bloc/login/login_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:firebase_auth9/bloc/login/login_cubit.dart';
 import 'package:firebase_auth9/ui/splash.dart';
 import 'package:firebase_auth9/utils/routes.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'bloc/register/register_cubit.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -20,7 +21,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (context) => LoginCubit())],
+      providers: [
+        BlocProvider(create: (context) => LoginCubit()),
+        BlocProvider(create: (context) => RegisterCubit())
+      ],
       child: MaterialApp(
         title: "Praktikum 6",
         debugShowCheckedModeBanner: false,
