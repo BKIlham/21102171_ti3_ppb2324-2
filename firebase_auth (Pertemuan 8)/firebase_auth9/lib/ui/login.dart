@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_auth9/ui/home_screen.dart';
+import 'package:firebase_auth9/ui/phone_auth_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_auth9/bloc/login/login_cubit.dart';
@@ -158,13 +159,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     width: 30.0,
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PhoneAuthScreen()));
+                    },
                     child: const CircleAvatar(
                       radius: 20.0,
                       backgroundImage: NetworkImage(
                           'https://freepngimg.com/thumb/business/83615-blue-icons-symbol-telephone-computer-logo.png'),
                     ),
-                  )
+                  ),
+
                 ],
               ),
               Row(
